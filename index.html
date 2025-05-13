@@ -11,12 +11,8 @@
       --accent: #0066ff;
     }
 
-    html {
-      box-sizing: border-box;
-    }
-    *, *:before, *:after {
-      box-sizing: inherit;
-    }
+    html { box-sizing: border-box; }
+    *, *:before, *:after { box-sizing: inherit; }
 
     body {
       margin: 0;
@@ -30,7 +26,7 @@
     header {
       background: var(--accent);
       color: #fff;
-      padding: 2.5rem 1rem 2.75rem; /* add more bottom padding so subtitle never hides */
+      padding: 2.5rem 1rem 2.75rem;
       text-align: center;
     }
 
@@ -49,17 +45,31 @@
     /* --- Main content container --- */
     .container {
       max-width: var(--max-width);
-      margin: -1rem auto 2rem; /* was -2.5rem; reduced so image won't cover subtitle */
+      margin: -1rem auto 2rem;
       background: #fff;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       padding: 2rem 1.25rem;
     }
 
-    /* --- Featured image --- */
-    figure {
-      margin: 0 0 1.5rem;
+    /* --- Author box --- */
+    .author-box {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      border-inline-start: 4px solid var(--accent);
+      padding-inline-start: 0.75rem;
     }
+
+    .author-box .author-name {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .author-box .author-title { margin: 0; }
+
+    /* --- Featured image --- */
+    figure { margin: 0 0 1.5rem; }
 
     figure img {
       width: 100%;
@@ -84,26 +94,29 @@
 
     article p {
       margin: 1rem 0;
-      text-align: justify; /* Hebrew justification looks cleaner */
+      text-align: justify;
       text-justify: inter-word;
     }
 
     /* --- Media queries for larger screens --- */
     @media (min-width: 760px) {
-      .container {
-        padding: 3rem;
-        margin-top: -2rem; /* slightly deeper pull-up on large screens where title bar is taller */
-      }
+      .container { padding: 3rem; margin-top: -2rem; }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>סם אלטמן חושף: 800 מיליון משתמשים בשבוע ועתיד שבו הבינה חכמה מהאדם</h1>
-    <p class="subtitle">דו"ח מהכנס השנתי של TED בוונקובר</p>
+    <p class="subtitle">המסרים הכי חזקים של סם אלטמן ב‑TED 2025</p>
   </header>
 
   <main class="container">
+    <!-- Author information -->
+    <div class="author-box">
+      <p class="author-name">מעיין שלום</p>
+      <p class="author-title">מהנדסת וחוקרת בינה מלאכותית</p>
+    </div>
+
     <figure>
       <img src="sam_altman.png" alt="דובר מציג על במה" />
       <figcaption>צילום: TED Conferences</figcaption>
@@ -124,7 +137,7 @@
 
       <p>בין הנושאים הנפיצים שעלו: סוכני AI אוטונומיים כמו הכלי החדש "<em>Operator</em>", שפועל באופן עצמאי באינטרנט. אלטמן הודה כי השימוש הלא נכון בטכנולוגיה כזו "עלול להוביל להשלכות קשות", ולכן נדרשת רגולציה ברורה.</p>
 
-      <p>אלטמן חזר והדגיש שה-AI הוא תהליך בלתי נמנע – כמו גילוי חוקי פיזיקה – ויש להתקדם בזהירות, אך בנחישות. כשנשאל מי נתן לו את הסמכות לעצב את עתיד האנושות, השיב: "<em>המטרה היא לחלק את הכוח בצורה אחראית – לא לרכז אותו</em>."</p>
+      <p>אלטמן חזר והדגיש שה-AI הוא תהליך בלתי נמנע – כמו גילוי חוקי פיזיקה – ויש להתקדם בזהירות, אך בנחישות. כשנשאל מי נתן לו את הסמכות לעצב את עתיד האנושות, השיב באנגלית: "The goal is to distribute power responsibly – not to concentrate it."</p>
 
       <p>על השאלה "מהי בעצם AGI?" הודה אלטמן שאין ב-OpenAI תשובה אחת ברורה, וההתקדמות צפויה להיות הדרגתית ולא בנקודת זמן אחת.</p>
 
